@@ -104,6 +104,23 @@
   .eco-banner h2 { font-size: 22px; font-weight: 700; color: #4CAF50; margin-bottom: 0.5rem; }
   .eco-banner p { font-size: 14px; color: rgba(255,255,255,0.5); max-width: 480px; margin: 0 auto; }
 
+  /* INTEGRIERTE STYLES AUS DEINER FEEDBACK-DATEI */
+  .ls-section { font-family: 'Inter', sans-serif; background: #0d0d1a; padding: 5rem 2rem; text-align: center; border-top: 1px solid rgba(255,215,0,0.1); border-bottom: 1px solid rgba(255,215,0,0.1); }
+  .ls-section-label { font-size: 11px; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: #FFD700; margin-bottom: 0.8rem; }
+  .ls-section-title { font-size: clamp(28px, 5vw, 40px); font-weight: 700; line-height: 1.1; color: white; margin-bottom: 0.8rem; }
+  .ls-section-sub { font-size: 15px; font-weight: 300; color: rgba(255,255,255,0.5); max-width: 520px; margin: 0 auto 2.5rem; line-height: 1.6; }
+  .ls-card { background: #1a1a2e; border: 1px solid rgba(255,215,0,0.18); border-radius: 18px; max-width: 560px; margin: 0 auto; padding: 2.5rem 2rem; opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .ls-card.visible { opacity: 1; transform: translateY(0); }
+  .ls-icon-wrap { width: 64px; height: 64px; background: rgba(255,215,0,0.12); border: 1px solid rgba(255,215,0,0.35); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 28px; }
+  .ls-card-title { font-size: 18px; font-weight: 700; color: white; margin-bottom: 0.5rem; }
+  .ls-card-desc { font-size: 14px; color: rgba(255,255,255,0.5); line-height: 1.65; margin-bottom: 2rem; }
+  .ls-btn { display: inline-flex; align-items: center; gap: 10px; background: #FFD700; color: #0a0a12; border: none; padding: 15px 38px; font-size: 15px; font-weight: 700; border-radius: 10px; cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif; transition: transform 0.2s, box-shadow 0.2s; }
+  .ls-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,215,0,0.3); }
+  .ls-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(255,215,0,0.3), transparent); margin: 1.8rem auto; max-width: 300px; }
+  .ls-note { font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 0.5px; }
+  .ls-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-bottom: 1.8rem; }
+  .ls-pill { background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.25); color: rgba(255,215,0,0.85); font-size: 12px; font-weight: 500; padding: 5px 14px; border-radius: 100px; letter-spacing: 0.3px; }
+
   .footer { background: #1a1a2e; padding: 3rem 2rem 2rem; text-align: center; border-top: 1px solid rgba(255,215,0,0.1); }
   .footer-logo { font-size: 28px; font-weight: 900; color: var(--gold); letter-spacing: -1px; margin-bottom: 0.5rem; }
   .footer-sub { font-size: 12px; color: rgba(255,255,255,0.3); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 2rem; }
@@ -156,7 +173,7 @@
     </div>
 
     <div class="hero-cta">
-      <button class="btn-primary" onclick="document.querySelector('.versions').scrollIntoView({behavior:'smooth'})">Jetzt entdecken</button>
+      <button class="btn-primary" onclick="document.querySelector('.ls-section').scrollIntoView({behavior:'smooth'})">Jetzt abstimmen</button>
       <button class="btn-secondary" onclick="document.querySelector('.showcase').scrollIntoView({behavior:'smooth'})">Mehr erfahren</button>
     </div>
   </div>
@@ -299,6 +316,32 @@
   <p>Keine Kinderarbeit. Keine Ressourcenverschwendung. Lazy Stir steht für nachhaltige Innovation — gut für dich und den Planeten.</p>
 </div>
 
+<div class="ls-section">
+  <div class="ls-section-label">Deine Meinung zählt</div>
+  <h2 class="ls-section-title">Hilf uns, Lazy Stir zu verbessern</h2>
+  <p class="ls-section-sub">Wir wollen wissen, was du von unserer selbstrührenden Solarstir-Tasse hältst. Nur 2 Minuten — versprochen.</p>
+
+  <div class="ls-card">
+    <div class="ls-icon-wrap">☀️</div>
+    <div class="ls-card-title">Produktumfrage starten</div>
+    <div class="ls-card-desc">Dein Feedback hilft uns, das beste Produkt für dich zu entwickeln — von Design über Preis bis hin zu Features.</div>
+
+    <div class="ls-pills">
+      <span class="ls-pill">2 Minuten</span>
+      <span class="ls-pill">Anonym möglich</span>
+      <span class="ls-pill">Direkt & einfach</span>
+    </div>
+
+    <a class="ls-btn" href="https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?subpage=design&token=65d4a1fff46f4ce0a50a67feac05b526&id=lucIWwpfoE2S65w4uzK2KoupO6938xdDkUTDSnSdcIdUQVA0VjI2S1g2Mk1CQjc0SkQ5WlhXMVNMMC4u" target="_blank" rel="noopener noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="12" y2="16"/></svg>
+      Zur Umfrage
+    </a>
+
+    <div class="ls-divider"></div>
+    <div class="ls-note">Danke für deine Unterstützung — Team NoEffort Inventions</div>
+  </div>
+</div>
+
 <div class="footer">
   <div class="footer-logo">LAZY STIR</div>
   <div class="footer-sub">by NoEffort Inventions</div>
@@ -323,7 +366,8 @@
     });
   }, { threshold: 0.15 });
 
-  document.querySelectorAll('.feature-card, .version-card').forEach((el, i) => {
+  // Fügt deine neue ls-card der eleganten Einblend-Animation hinzu
+  document.querySelectorAll('.feature-card, .version-card, .ls-card').forEach((el, i) => {
     el.style.transitionDelay = `${i * 0.08}s`;
     observer.observe(el);
   });
